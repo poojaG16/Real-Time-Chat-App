@@ -1,0 +1,16 @@
+<div class="chat-container">
+  <div class="messages">
+    <div *ngFor="let msg of messages"
+      [ngClass]="{ 'sent': msg.sender === currentUser, 'received': msg.sender !== currentUser }" class="message">
+      <strong>{{ msg.sender }}:</strong> {{ msg.message }}
+
+    </div>
+  </div>
+  <div class="input-container">
+    <input [(ngModel)]="newMessage" placeholder="Type a message..." />
+    <button mat-mini-fab (click)="sendMessage()" [disabled]="!newMessage">
+      <mat-icon>favorite</mat-icon>
+      Send</button>
+  </div>
+
+</div>

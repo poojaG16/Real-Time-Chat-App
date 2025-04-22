@@ -1,0 +1,17 @@
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Optional: Add a shadow for better aesthetics
+  border-radius: 8px; // Optional: Add rounded corners
+  background-color: white; // Ensure the card has a white background
+  padding: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+mat-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}

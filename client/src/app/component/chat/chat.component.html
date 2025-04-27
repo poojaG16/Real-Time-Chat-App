@@ -2,15 +2,16 @@
   <div class="messages">
     <div *ngFor="let msg of messages"
       [ngClass]="{ 'sent': msg.sender === currentUser, 'received': msg.sender !== currentUser }" class="message">
-      <strong>{{ msg.sender }}:</strong> {{ msg.message }}
-
+      <mat-icon class="sent-icon">sentiment_satisfied</mat-icon>
+      <strong class="sender">{{ msg.sender }}:</strong>
+      <span class="message-content">{{ msg.message }}</span>
     </div>
   </div>
   <div class="input-container">
-    <input [(ngModel)]="newMessage" placeholder="Type a message..." />
+    <input [(ngModel)]="newMessage" (input)="onTyping()"
+      [placeholder]="typingUser ? typingUser + ' is typing....' : 'Type a message...'" />
     <button mat-mini-fab (click)="sendMessage()" [disabled]="!newMessage">
       <mat-icon>favorite</mat-icon>
       Send</button>
   </div>
-
 </div>

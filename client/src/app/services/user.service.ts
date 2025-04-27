@@ -44,4 +44,9 @@ export class UserService {
     this._currentUser.next(null);
     localStorage.removeItem('currentUser');
   }
+
+  isAuthenticated(): boolean{
+    const user = this.getCurrentUserValue();
+    return user !== null && user !== undefined && user !== '';
+  }
 }

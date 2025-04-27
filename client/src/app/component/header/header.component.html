@@ -1,0 +1,14 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Chat App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon info-icon" aria-label="Example icon-button with info icon" (click)="navigateToInfo()">
+        <mat-icon matTooltip="info">info</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon account_circle-icon" aria-label="Example icon-button with account_circleicon" (click)="logout()">
+        <mat-icon [matTooltip]="userService.isAuthenticated() ? 'Logout' : 'Login' ">{{ userService.isAuthenticated() ? 'logout' : 'login' }}
+        </mat-icon>
+    </button>
+</mat-toolbar>

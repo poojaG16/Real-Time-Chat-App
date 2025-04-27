@@ -18,11 +18,23 @@
 }
 
 .message {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   max-width: 60%;
   padding: 10px;
   border-radius: 10px;
   font-size: 14px;
   word-wrap: break-word;
+}
+
+.sender {
+  font-weight: bold;
+  margin-right: 10px; /* Adds space between sender and message */
+}
+
+.message-content {
+  flex: 1;
 }
 
 .sent {
@@ -85,4 +97,10 @@ button:disabled:hover {
   flex-direction: row;
   justify-content: center;
   width: 140px;
+}
+
+.typing-indicator {
+  font-style: italic;
+  color: gray;
+  margin-top: 5px;
 }
